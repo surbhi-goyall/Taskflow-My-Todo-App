@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+  <h1 class="app-title">My Todo App</h1>
+  <div class="user-info-row">
+    <div class="user-left">
+      <span class="username" id="username">Surbhi</span>
+      <img id="avatar" class="avatar" />
+    </div>
+    <button class="signout-btn" id="signout">Sign Out</button>
+  </div>
+  </div>
+</div>
+
+
+  <main class="main-container">
+    <div class="tab-bar">
+        <button class="tab-btn active" data-tab="todo">Todo (<span id="todo-count">0</span>)</button>
+        <button class="tab-btn" data-tab="completed">Completed (<span id="completed-count">0</span>)</button>
+        <button class="tab-btn" data-tab="archived">Archived (<span id="archived-count">0</span>)</button>
+    </div>
+
+
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Add your task (text-box)" />
+      <button id="addTaskBtn" class="submit-btn">Submit</button>
+    </div>
+
+    <div id="todo" class="task-section">
+      <div class="task-list"></div>
+    </div>
+    <div id="completed" class="task-section" style="display: none;">
+      <div class="task-list"></div>
+    </div>
+    <div id="archived" class="task-section" style="display: none;">
+      <div class="task-list"></div>
+      <button id="clearArchivedBtn" class="clear-btn">🗑️ Clear All Archived Tasks</button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
